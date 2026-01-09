@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="886.0" style="-fx-background-color: #003f5c;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BookTicket4Controller">
+   <children>
+      <TableView fx:id="Ticket_table" layoutX="9.0" layoutY="120.0" onMouseClicked="#availableSelectUserData" prefHeight="506.0" prefWidth="878.0">
+        <columns>
+          <TableColumn fx:id="ticket_firstName" prefWidth="73.60000610351562" text="First Name" />
+          <TableColumn fx:id="ticket_lastName" prefWidth="68.00003051757812" text="Last Name" />
+            <TableColumn fx:id="ticket_phone" prefWidth="84.79998779296875" text="Phone No. " />
+            <TableColumn fx:id="ticket_from" prefWidth="99.20001220703125" text="From" />
+            <TableColumn fx:id="ticket_to" prefWidth="69.99996948242188" text="To" />
+            <TableColumn fx:id="ticket_busId" prefWidth="83.20001220703125" text="Bus ID" />
+            <TableColumn fx:id="ticket_type" prefWidth="83.199951171875" text="Ac/Non-Ac" />
+            <TableColumn fx:id="ticket_seat" prefWidth="75.20001220703125" text="SeatNum" />
+            <TableColumn fx:id="ticket_price" prefWidth="74.4000244140625" text="Price" />
+            <TableColumn fx:id="ticket_date" prefWidth="79.2000732421875" text="Date" />
+            <TableColumn fx:id="ticket_satus" prefWidth="83.199951171875" text="Status" />
+        </columns>
+      </TableView>
+      <TextField fx:id="selected_busid" layoutX="65.0" layoutY="77.0" prefHeight="26.0" prefWidth="190.0" />
+      <AnchorPane layoutY="-1.0" prefHeight="42.0" prefWidth="886.0" style="-fx-background-color: #7593af;">
+         <children>
+            <Button fx:id="customerBus_BackButton" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#Back" text="Back">
+               <font>
+                  <Font name="Britannic Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="customerBus_closeButton" layoutX="860.0" layoutY="8.0" mnemonicParsing="false" onAction="#Close" text="X">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="Selected_status" layoutX="289.0" layoutY="77.0" prefHeight="26.0" prefWidth="190.0" />
+      <Label layoutX="65.0" layoutY="51.0" prefHeight="20.0" prefWidth="59.0" text="Bus Id" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="289.0" layoutY="51.0" prefHeight="20.0" prefWidth="59.0" text="Status" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="516.0" layoutY="75.0" mnemonicParsing="false" onAction="#availableSatusUpdate" prefHeight="29.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 15;" text="Change Status" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

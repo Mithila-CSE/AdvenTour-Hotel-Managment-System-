@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ticket_ManageController">
+   <children>
+      <AnchorPane layoutX="1.0" layoutY="-4.0" prefHeight="43.0" prefWidth="800.0" style="-fx-background-color: #acdbdf;">
+         <children>
+            <Button fx:id="back" layoutY="8.0" mnemonicParsing="false" onAction="#Back" prefHeight="25.0" prefWidth="49.0" style="-fx-background-color: transparent;" text="Back" textFill="#2e2882">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="close" layoutX="761.0" layoutY="8.0" mnemonicParsing="false" onAction="#Close" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: transparent;" text="X" textFill="#2e2882">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="409.0" layoutY="38.0" prefHeight="662.0" prefWidth="392.0" style="-fx-background-color: #caf0f6;">
+         <children>
+            <AnchorPane layoutX="54.0" layoutY="180.0" prefHeight="266.0" prefWidth="284.0" style="-fx-background-color: transparent; -fx-border-color: #3a5177;">
+               <children>
+                  <Button fx:id="Buses" layoutX="58.0" layoutY="69.0" mnemonicParsing="false" onAction="#AvailBus" style="-fx-background-color: transparent; -fx-border-color: #3a5177; -fx-border-radius: 20;" text="Available Buses" textFill="#2e2882">
+                     <font>
+                        <Font name="Britannic Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="customer" layoutX="75.0" layoutY="141.0" mnemonicParsing="false" onAction="#Customers" prefHeight="38.0" prefWidth="131.0" style="-fx-background-color: transparent; -fx-border-color: #3a5177; -fx-border-radius: 20;" text="Customers" textFill="#2e2882">
+                     <font>
+                        <Font name="Britannic Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label layoutX="-114.0" layoutY="14.0" text="Ticket Manage" textFill="#2e2882">
+               <font>
+                  <Font name="Dubai Bold" size="36.0" />
+               </font>
+            </Label>
+            <Line endX="145.39996337890625" layoutX="-9.0" layoutY="78.0" startX="-127.60000610351562" stroke="#2e2882" strokeWidth="3.0" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="314.0" fitWidth="326.0" layoutX="43.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@travel-bus-illustration-logo-on-light-background-free-vector.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

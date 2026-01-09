@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #caf0f6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BookHotel3Controller">
+   <children>
+      <TableView fx:id="customers_tableView" layoutX="9.0" layoutY="120.0" prefHeight="506.0" prefWidth="786.0">
+        <columns>
+          <TableColumn fx:id="customers_customerNumber" prefWidth="90.0" style="-fx-background-color: #caf0f6; -fx-border-color: #FFFFFF;" text="Customer" />
+            <TableColumn fx:id="customers_firstName" prefWidth="95.33331298828125" style="-fx-background-color: #caf0f6; -fx-border-color: #FFFFFF;" text="First Name" />
+            <TableColumn fx:id="customers_lastName" prefWidth="98.00003051757812" style="-fx-background-color: #caf0f6; -fx-border-color: #FFFFFF;" text="Last Name" />
+            <TableColumn fx:id="customers_phoneNumber" prefWidth="116.0" style="-fx-background-color: #caf0f6; -fx-border-color: #FFFFFF;" text="Phone No." />
+            <TableColumn fx:id="customers_totalPayment" prefWidth="115.99996948242188" style="-fx-background-color: #caf0f6; -fx-border-color: #FFFFFF;" text="Total Payment" />
+            <TableColumn fx:id="customers_checkedIn" prefWidth="123.33331298828125" style="-fx-background-color: #caf0f6; -fx-border-color: #FFFFFF;" text="Checked In" />
+            <TableColumn fx:id="customers_checkedOut" prefWidth="144.66668701171875" style="-fx-background-color: #caf0f6; -fx-border-color: #FFFFFF;" text="Checked Out" />
+        </columns>
+      </TableView>
+      <TextField fx:id="customers_Search" layoutX="43.0" layoutY="63.0" onKeyTyped="#customerSearch" prefHeight="25.0" prefWidth="277.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: #3a5177; -fx-border-radius: 50;" text="Search">
+         <font>
+            <Font name="Britannic Bold" size="12.0" />
+         </font></TextField>
+      <AnchorPane layoutY="-1.0" prefHeight="33.0" prefWidth="801.0" style="-fx-background-color: #acdbdf;">
+         <children>
+            <Button fx:id="back" layoutY="1.0" mnemonicParsing="false" onAction="#Back" prefHeight="26.0" prefWidth="62.0" style="-fx-background-color: transparent;" text="Back" textFill="#3a5177">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="closeButton" layoutX="762.0" layoutY="3.0" mnemonicParsing="false" onAction="#Close" prefHeight="26.0" prefWidth="38.0" style="-fx-background-color: transparent;" text="X" textFill="#3a5177">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

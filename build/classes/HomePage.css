@@ -1,0 +1,10 @@
+.root{
+    -fx-background-image:url('HomePageImage.jpg');
+    -fx-background-size:cover;
+    
+}
+
+.shadow{
+    -fx-effect:dropshadow(three-pass-box,rgba(0,0,0,0.4),5,0,0,0);
+    -fx-background-size:cover;
+}

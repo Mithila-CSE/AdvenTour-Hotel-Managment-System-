@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="703.0" prefWidth="1011.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BooKTicket2Controller">
+   <children>
+      <AnchorPane layoutY="45.0" prefHeight="659.0" prefWidth="283.0" style="-fx-background-color: #7593af;">
+         <children>
+            <Label layoutX="8.0" layoutY="215.0" prefHeight="18.0" prefWidth="54.0" text="Bus ID" textFill="#fdfdfd">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="availableBus_BusId" layoutX="69.0" layoutY="211.0" prefHeight="25.0" prefWidth="188.0" />
+            <Label layoutX="24.0" layoutY="111.0" text="From" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="availableBus_FromField" layoutX="69.0" layoutY="106.0" prefHeight="25.0" prefWidth="188.0" />
+            <Label layoutX="20.0" layoutY="266.0" text="Status" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="availableBus_Status" layoutX="69.0" layoutY="261.0" onAction="#comboBoxStatus" prefHeight="25.0" prefWidth="188.0" promptText="Choose" />
+            <TextField fx:id="availableBus_PriceField" layoutX="69.0" layoutY="304.0" prefHeight="25.0" prefWidth="188.0" />
+            <Label layoutX="15.0" layoutY="309.0" prefHeight="16.0" prefWidth="39.0" text="Price" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="availableBus_datePicker" layoutX="75.0" layoutY="355.0" promptText="DD-MMM-YYYY" />
+            <Label layoutX="21.0" layoutY="360.0" text="Date" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="availableBus_addButton" layoutX="30.0" layoutY="509.0" mnemonicParsing="false" onAction="#availableBusAdd" prefHeight="30.0" prefWidth="74.0" text="ADD">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="availableBus_updateButton" layoutX="150.0" layoutY="509.0" mnemonicParsing="false" onAction="#availableBusUpdate" text="UPDATE">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="availableBus_deleteButton" layoutX="150.0" layoutY="574.0" mnemonicParsing="false" onAction="#availableBusDelete" prefHeight="30.0" prefWidth="87.0" text="DELETE">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="availableBus_resetButton" layoutX="28.0" layoutY="574.0" mnemonicParsing="false" onAction="#availableBusReset" text="RESET">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="availableBus_ToField" layoutX="69.0" layoutY="162.0" prefHeight="25.0" prefWidth="188.0" />
+            <Label layoutX="40.0" layoutY="167.0" text="To" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="285.0" layoutY="43.0" prefHeight="659.0" prefWidth="727.0" style="-fx-background-color: #a3b7ca;">
+         <children>
+            <TableView fx:id="searchTable_TableView" layoutX="-2.0" layoutY="51.0" onMouseClicked="#availableBSelectBusData" prefHeight="611.0" prefWidth="727.0">
+              <columns>
+                <TableColumn fx:id="searchTable_BusId" prefWidth="122.39999389648438" text="Bus ID" />
+                <TableColumn fx:id="searchTable_From" prefWidth="115.20001220703125" text="From" />
+                  <TableColumn fx:id="searchTable_To" prefWidth="130.39996337890625" text="To" />
+                  <TableColumn fx:id="searchTable_status" prefWidth="119.20001220703125" text="Status" />
+                  <TableColumn fx:id="searchTable_Price" prefWidth="120.0" text="Price" />
+                  <TableColumn fx:id="searchTable_Date" prefWidth="124.800048828125" text="Date" />
+              </columns>
+            </TableView>
+            <TextField fx:id="Bus_search" layoutX="26.0" layoutY="14.0" onAction="#availableSearch" prefHeight="25.0" prefWidth="313.0" promptText="SEARCH" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-1.0" layoutY="-3.0" prefHeight="46.0" prefWidth="1011.0" style="-fx-background-color: #d1dbe4;">
+         <children>
+            <Button fx:id="availableBus_BackButton" layoutY="10.0" mnemonicParsing="false" onAction="#Back" text="Back">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="availableBus_closeButton" layoutX="983.0" layoutY="8.0" mnemonicParsing="false" onAction="#Close" text="X">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

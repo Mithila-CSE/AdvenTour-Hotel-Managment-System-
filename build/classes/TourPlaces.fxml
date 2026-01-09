@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TourPlacesController">
+   <children>
+      <AnchorPane prefHeight="38.0" prefWidth="900.0" style="-fx-border-color: black; -fx-border-width: 0px 0px 0.5px 0px;">
+         <children>
+            <Button fx:id="backButton" layoutY="6.0" mnemonicParsing="false" onAction="#Back" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: transparent;" text="Back">
+               <font>
+                  <Font name="Britannic Bold" size="16.0" />
+               </font></Button>
+            <Button fx:id="closeButton" layoutX="851.0" layoutY="6.0" mnemonicParsing="false" onAction="#CloseFXML" prefHeight="26.0" prefWidth="41.0" style="-fx-background-color: transparent;" text="X">
+               <font>
+                  <Font name="Britannic Bold" size="16.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="38.0" prefHeight="662.0" prefWidth="386.0" style="-fx-background-color: #fdffb6;">
+         <children>
+            <ComboBox fx:id="bookDhaka" layoutX="94.0" layoutY="77.0" onAction="#showImage" prefHeight="38.0" prefWidth="170.0" promptText="               Dhaka" style="-fx-background-color: Transparent; -fx-border-color: black; -fx-border-radius: 15;" />
+            <ComboBox fx:id="bookCtg" layoutX="94.0" layoutY="140.0" onAction="#showImage1" prefHeight="38.0" prefWidth="170.0" promptText="             Chittagong" style="-fx-background-color: Transparent; -fx-border-color: black; -fx-border-radius: 15;" />
+            <ComboBox fx:id="bookBarishal" layoutX="94.0" layoutY="320.0" onAction="#showImage4" prefHeight="38.0" prefWidth="170.0" promptText="               Barishal" style="-fx-background-color: Transparent; -fx-border-color: black; -fx-border-radius: 15;" />
+            <ComboBox fx:id="bookKhulna" layoutX="94.0" layoutY="262.0" onAction="#showImage3" prefHeight="38.0" prefWidth="170.0" promptText="               Khulna" style="-fx-background-color: Transparent; -fx-border-color: black; -fx-border-radius: 15;" />
+            <ComboBox fx:id="bookRaj" layoutX="94.0" layoutY="201.0" onAction="#showImage2" prefHeight="38.0" prefWidth="170.0" promptText="              Rajshahi" style="-fx-background-color: Transparent; -fx-border-color: black; -fx-border-radius: 15;" />
+            <ComboBox fx:id="bookSylhet" layoutX="94.0" layoutY="378.0" onAction="#showImage5" prefHeight="38.0" prefWidth="170.0" promptText="               Sylhet" style="-fx-background-color: Transparent; -fx-border-color: black; -fx-border-radius: 15;" />
+            <ComboBox fx:id="bookMymen" layoutX="94.0" layoutY="436.0" onAction="#showImage7" prefHeight="38.0" prefWidth="170.0" promptText="             Mymensingh" style="-fx-background-color: Transparent; -fx-border-color: black; -fx-border-radius: 15;" />
+            <ComboBox fx:id="bookRang" layoutX="94.0" layoutY="499.0" onAction="#showImage6" prefHeight="38.0" prefWidth="170.0" promptText="               Rangpur" style="-fx-background-color: Transparent; -fx-border-color: black; -fx-border-radius: 15;" />
+            <Button fx:id="transport" layoutX="48.0" layoutY="591.0" mnemonicParsing="false" onAction="#Transport" prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: trnasparent; -fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" text="Transport">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Button>
+            <Button fx:id="hotel" layoutX="209.0" layoutY="591.0" mnemonicParsing="false" onAction="#HotelPage" prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: trnasparent; -fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" text="Hotel">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="386.0" layoutY="38.0" prefHeight="662.0" prefWidth="516.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fx:id="im" fitHeight="296.0" fitWidth="316.0" layoutX="118.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="text" layoutX="134.0" layoutY="357.0" prefHeight="247.0" prefWidth="298.0" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Britannic Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

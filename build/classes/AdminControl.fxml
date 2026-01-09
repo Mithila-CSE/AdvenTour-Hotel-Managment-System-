@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminControlController">
+   <children>
+      <AnchorPane layoutX="391.0" prefHeight="700.0" prefWidth="384.0" style="-fx-background-color: #a0c4ff;">
+         <children>
+            <Button fx:id="hotel" layoutX="139.0" layoutY="176.0" mnemonicParsing="false" onAction="#Hotel" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #3e0707; -fx-border-width: 0px 0px 3px 0px;" text="Hotel Manage" textFill="#3e0707e8">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="ticket" layoutX="132.0" layoutY="243.0" mnemonicParsing="false" onAction="#Ticket" prefHeight="31.0" prefWidth="182.0" style="-fx-background-color: transparent; -fx-border-color: #3e0707; -fx-border-width: 0px 0px 3px 0px;" text="Bus Ticket Manage" textFill="#3e0707e8">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Place" layoutX="140.0" layoutY="327.0" mnemonicParsing="false" onAction="#TouristPlaces" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #3e0707; -fx-border-width: 0px 0px 3px 0px;" text="Place Manage" textFill="#3e0707e8">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="close" layoutX="382.0" layoutY="1.0" mnemonicParsing="false" onAction="#Close" prefHeight="25.0" prefWidth="23.0" style="-fx-background-color: #d1dbe4;" text="X" textFill="#282296e8">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="CustomerButton" layoutX="140.0" layoutY="413.0" mnemonicParsing="false" onAction="#TouristCustomer" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #3e0707; -fx-border-width: 0px 0px 3px 0px;" text="Total Customer" textFill="#3e0707e8">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="214.0" fitWidth="305.0" layoutX="50.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@admin%20image.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="back" layoutY="1.0" mnemonicParsing="false" onAction="#Back" prefHeight="25.0" prefWidth="49.0" style="-fx-background-color: #d1dbe4;" text="Back" textFill="#282296e8">
+         <font>
+            <Font name="Britannic Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="125.0" layoutY="162.0" prefHeight="30.0" prefWidth="188.0" text="ADMIN DESK" textFill="#3e0707">
+         <font>
+            <Font name="Britannic Bold" size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

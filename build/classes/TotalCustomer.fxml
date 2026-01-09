@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #caf0f6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TotalCustomerController">
+   <children>
+      <AnchorPane layoutY="129.0" prefHeight="570.0" prefWidth="900.0">
+         <children>
+            <TableView fx:id="UserTable" layoutX="134.0" layoutY="203.0" onMouseClicked="#availableSelectUserData" prefHeight="570.4" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="colfirstname" prefWidth="95.20001375675201" text="First Name" />
+                <TableColumn fx:id="collastname" prefWidth="95.99996185302734" text="Last Name" />
+                  <TableColumn fx:id="colusername" prefWidth="107.20004272460938" text="UserName" />
+                  <TableColumn fx:id="colemail" prefWidth="96.79998779296875" text="Email" />
+                  <TableColumn fx:id="colphone" prefWidth="108.79998779296875" text="Phone" />
+                  <TableColumn fx:id="colgender" prefWidth="93.60000610351562" text="Gender" />
+                  <TableColumn fx:id="colpass" prefWidth="100.0" text="Password" />
+                  <TableColumn fx:id="colconpass" prefWidth="104.00006103515625" text=" Confirm&#10;Password" />
+                  <TableColumn fx:id="colimage" prefWidth="107.199951171875" text="Image" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="CancelButton" layoutX="67.0" layoutY="80.0" mnemonicParsing="false" onAction="#availableUserDelete" prefHeight="26.0" prefWidth="144.0" style="-fx-background-color: TRansparent;" text="Cancel Membership">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="BackButton" layoutY="-1.0" mnemonicParsing="false" onAction="#Back" prefHeight="30.0" prefWidth="59.0" style="-fx-background-color: transparent;" text="Back">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="closeButton" layoutX="866.0" mnemonicParsing="false" onAction="#Close" prefHeight="26.0" prefWidth="34.0" style="-fx-background-color: transparent;" text="X">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="Username_delete" layoutX="218.0" layoutY="81.0" prefHeight="26.0" prefWidth="218.0" promptText="Username" />
+   </children>
+</AnchorPane>

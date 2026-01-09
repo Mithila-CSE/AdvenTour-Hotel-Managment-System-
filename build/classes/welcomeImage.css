@@ -1,0 +1,5 @@
+.root{
+    -fx-background-image:url('WelcomeImage.jpg');
+    -fx-background-size:cover;
+    
+}
