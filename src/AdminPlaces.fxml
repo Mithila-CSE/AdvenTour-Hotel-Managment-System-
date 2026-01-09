@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminPlacesController">
+   <children>
+      <AnchorPane layoutY="41.0" prefHeight="658.0" prefWidth="278.0" style="-fx-background-color: #003f5c;">
+         <children>
+            <TextArea fx:id="ImageText" layoutX="30.0" layoutY="247.0" prefHeight="56.0" prefWidth="200.0" />
+            <TextArea fx:id="Dtext" layoutX="34.0" layoutY="377.0" prefHeight="56.0" prefWidth="200.0" />
+            <Label layoutX="30.0" layoutY="38.0" prefHeight="26.0" prefWidth="114.0" text="Division" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="16.0" />
+               </font></Label>
+            <Button fx:id="addButton" layoutX="34.0" layoutY="508.0" mnemonicParsing="false" onAction="#availablePlaceAdd" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-radius: 15; -fx-border-width: 2px 2px 2px 2px;" text="ADD" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="16.0" />
+               </font></Button>
+            <TextField fx:id="placeName" layoutX="30.0" layoutY="149.0" prefHeight="26.0" prefWidth="200.0" />
+            <Label layoutX="30.0" layoutY="122.0" prefHeight="26.0" prefWidth="114.0" text="Place Name" textFill="#fffdfd">
+               <font>
+                  <Font name="Britannic Bold" size="16.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="imageButton" layoutX="30.0" layoutY="220.0" onAction="#getImage" prefHeight="26.0" prefWidth="94.0" text="Add Image" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="TextButton" layoutX="34.0" layoutY="350.0" onAction="#getText" prefHeight="26.0" prefWidth="123.0" text="Add Description" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Button fx:id="upButton" layoutX="164.0" layoutY="508.0" mnemonicParsing="false" onAction="#availablePlaceUpdate" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-radius: 15; -fx-border-width: 2px 2px 2px 2px;" text="UPDATE" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="ResetButton" layoutX="34.0" layoutY="566.0" mnemonicParsing="false" onAction="#availablePlaceReset" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-radius: 15; -fx-border-width: 2px 2px 2px 2px;" text="RESET" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="16.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="Division" layoutX="30.0" layoutY="65.0" prefHeight="26.0" prefWidth="200.0" promptText="Choose Division" />
+            <Button layoutX="164.0" layoutY="566.0" mnemonicParsing="false" onAction="#availablePlaceDelete" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-radius: 15; -fx-border-width: 2px 2px 2px 2px;" text="DELETE" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="275.0" layoutY="41.0" prefHeight="658.0" prefWidth="724.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="PlaceTable" layoutX="172.0" onMouseClicked="#availablePlaceSelectData" prefHeight="658.0" prefWidth="724.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="PLaceTable_Division" prefWidth="160.79998779296875" text="Division" />
+                <TableColumn fx:id="PLaceTable_Name" minWidth="0.0" prefWidth="175.99990844726562" text="PalceName" />
+                  <TableColumn fx:id="PLaceTable_Image" minWidth="0.0" prefWidth="196.00006103515625" text="Image" />
+                  <TableColumn fx:id="PLaceTable_Description" minWidth="0.0" prefWidth="189.5999755859375" text="Description" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="BackButton" layoutY="2.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: transparent;" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="closeButton" layoutX="974.0" layoutY="1.0" mnemonicParsing="false" onAction="#close" style="-fx-background-color: transparent;" text="X">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

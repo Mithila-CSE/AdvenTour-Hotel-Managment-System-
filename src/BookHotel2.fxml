@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BookHotel2Controller">
+   <children>
+      <AnchorPane layoutY="42.0" prefHeight="662.0" prefWidth="291.0" style="-fx-background-color: #caf0f6;">
+         <children>
+            <Label layoutX="13.0" layoutY="91.0" prefHeight="17.0" prefWidth="77.0" text="Room No :" textFill="#3a5177">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="availableRooms_roomNumber" layoutX="104.0" layoutY="87.0" prefHeight="25.0" prefWidth="159.0" style="-fx-background-color: transparent; -fx-border-color: #3a5177; -fx-border-radius: 40;" />
+            <Label layoutX="14.0" layoutY="147.0" text="Room Type :" textFill="#3a5177">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="201.0" text="Status :" textFill="#3a5177">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="availableRooms_status" layoutX="104.0" layoutY="196.0" onAction="#availableRoomsStatus" prefHeight="25.0" prefWidth="159.0" promptText="Choose" style="-fx-background-color: transparent; -fx-border-color: #3a5177; -fx-border-radius: 40;" />
+            <TextField fx:id="availableRooms_price" layoutX="104.0" layoutY="246.0" prefHeight="25.0" prefWidth="159.0" style="-fx-background-color: transparent; -fx-border-color: #3a5177; -fx-border-radius: 40;" />
+            <Label layoutX="17.0" layoutY="251.0" prefHeight="16.0" prefWidth="49.0" text="Price :" textFill="#3a5177">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="availableRooms_addBtn" layoutX="24.0" layoutY="324.0" mnemonicParsing="false" onAction="#availableRoomsAdd" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: transparent;" text="ADD" textFill="#3a5177">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="availableRooms_updateBtn" layoutX="159.0" layoutY="324.0" mnemonicParsing="false" onAction="#availableRoomsUpdate" prefHeight="36.0" prefWidth="87.0" style="-fx-background-color: transparent;" text="UPDATE" textFill="#3a5177">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="availableRooms_deleteBtn" layoutX="158.0" layoutY="399.0" mnemonicParsing="false" onAction="#availableRoomsDelete" prefHeight="36.0" prefWidth="87.0" style="-fx-background-color: transparent;" text="DELETE" textFill="#3a5177">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="availableRooms_clearBtn" layoutX="24.0" layoutY="399.0" mnemonicParsing="false" onAction="#availableRoomsClear" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: transparent;" text="CLEAR" textFill="#3a5177">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="availableRooms_roomType" layoutX="104.0" layoutY="142.0" onAction="#availableRoomsRoomType" prefHeight="25.0" prefWidth="159.0" promptText="Choose" style="-fx-background-color: tranparent; -fx-border-color: #3a5177; -fx-border-radius: 40;" />
+            <Line endX="-30.00000762939453" layoutX="122.0" layoutY="361.0" startX="-89.33332824707031" stroke="#25364c" />
+            <Line endX="30.333328247070312" endY="-1.0" layoutX="216.0" layoutY="361.0" startX="-57.00001525878906" startY="-1.0" stroke="#25364c" />
+            <Line endX="-17.33332061767578" endY="-3.0517578125E-5" layoutX="125.0" layoutY="435.0" startX="-100.0" stroke="#25364c" />
+            <Line endX="-1.6666717529296875" endY="-1.0" layoutX="247.0" layoutY="436.0" startX="-79.33332824707031" startY="-1.000030517578125" stroke="#25364c" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="291.0" layoutY="40.0" prefHeight="662.0" prefWidth="491.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <TableView fx:id="availableRooms_tableView" layoutY="48.0" onMouseClicked="#availableRoomsSelectData" prefHeight="613.0" prefWidth="505.0" style="-fx-background-color: transparent; -fx-border-color: #3a5177;">
+              <columns>
+                <TableColumn fx:id="availableRooms_col_roomNumber" prefWidth="110.6666259765625" style="-fx-background-color: #caf0f6; -fx-border-color: #FFFFFF;" text="Room" />
+                <TableColumn fx:id="availableRooms_col_roomType" prefWidth="151.33331298828125" style="-fx-background-color: #caf0f6; -fx-border-color: #FFFFFF;" text="Room Type" />
+                  <TableColumn fx:id="availableRooms_col_status" prefWidth="138.66668701171875" style="-fx-background-color: #caf0f6; -fx-border-color: #FFFFFF;" text="Status" />
+                  <TableColumn fx:id="availableRooms_col_price" prefWidth="116.0" style="-fx-background-color: #caf0f6; -fx-border-color: #FFFFFF;" text="Price" />
+              </columns>
+            </TableView>
+            <TextField fx:id="availableRooms_search" layoutX="26.0" layoutY="14.0" onAction="#availableRoomsSearch" prefHeight="25.0" prefWidth="313.0" promptText="SEARCH" style="-fx-background-color: transparent; -fx-border-color: #3a5177; -fx-border-radius: 50;" text="SEARCH">
+               <font>
+                  <Font name="Britannic Bold" size="12.0" />
+               </font></TextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-1.0" layoutY="-3.0" prefHeight="46.0" prefWidth="800.0" style="-fx-background-color: #acdbdf;">
+         <children>
+            <Button fx:id="backButton" layoutY="10.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: transparent;" text="Back" textFill="#3a5177">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="close" layoutX="765.0" layoutY="8.0" mnemonicParsing="false" onAction="#Close" style="-fx-background-color: transparent;" text="X" textFill="#3a5177">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

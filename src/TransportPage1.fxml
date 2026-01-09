@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #fdffb6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TransportPage1Controller">
+   <children>
+      <Button layoutX="286.0" layoutY="501.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="242.0" style="-fx-background-color: transparent; -fx-border-color: #5b0d59; -fx-border-width: 0px 0px 3px 0px;" text="Whole day Booking" textFill="#5b0d59">
+         <font>
+            <Font name="Britannic Bold" size="24.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="312.0" fitWidth="518.0" layoutX="141.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@TranspotImage.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="222.0" layoutY="77.0" prefHeight="63.0" prefWidth="370.0" text="Select Transport Type" textFill="#5b0d59">
+         <font>
+            <Font name="Britannic Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="BusButton" layoutX="286.0" layoutY="568.0" mnemonicParsing="false" onAction="#BusPage" prefHeight="46.0" prefWidth="242.0" style="-fx-background-color: transparent; -fx-border-color: #5b0d59; -fx-border-width: 0px 0px 3px 0px;" text="Bus Service" textFill="#5b0d59">
+         <font>
+            <Font name="Britannic Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="Back4Button" layoutY="1.0" mnemonicParsing="false" onAction="#Back4" style="-fx-background-color: transparent;" text="Back" textFill="#5b0d59">
+         <font>
+            <Font name="Britannic Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="closeButton" layoutX="768.0" layoutY="1.0" mnemonicParsing="false" onAction="#close" prefHeight="16.0" prefWidth="32.0" style="-fx-background-color: transparent;" text="X" textFill="#5b0d59">
+         <font>
+            <Font name="Britannic Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
