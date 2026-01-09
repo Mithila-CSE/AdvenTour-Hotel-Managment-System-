@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="800.0" stylesheets="@UserImage.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserLogInController">
+   <children>
+      <Pane layoutX="235.0" layoutY="218.0" prefHeight="263.0" prefWidth="356.0">
+         <children>
+            <Label layoutX="103.0" layoutY="29.0" prefHeight="25.0" prefWidth="85.0" text="UserName" textFill="#fcfafa">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="103.0" layoutY="100.0" prefHeight="25.0" prefWidth="85.0" text="Password" textFill="#fff8f8">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <PasswordField layoutX="103.0" layoutY="125.0" promptText="Enter Password" />
+            <Button fx:id="LogIn2Button" layoutX="128.0" layoutY="169.0" mnemonicParsing="false" onAction="#LogIn2" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: Transparent;" text="LogIn" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Hyperlink alignment="CENTER" layoutX="109.0" layoutY="213.0" prefHeight="23.0" prefWidth="137.0" text="Forgot Password?" textFill="#fffdfd" />
+            <TextField layoutX="104.0" layoutY="54.0" promptText="Enter UserName" />
+         </children>
+      </Pane>
+      <Button fx:id="BackButton" layoutX="-2.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: transparent;" text="Back" textFill="#fffcfc">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

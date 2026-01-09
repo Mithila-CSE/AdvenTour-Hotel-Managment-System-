@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" stylesheets="@welcomeImage.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WelcomeController">
+   <children>
+      <Button fx:id="LogIn1Button" layoutX="357.0" layoutY="480.0" mnemonicParsing="false" onAction="#LogIn" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #00FFFF;" text="LogIn">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="SignUpButton" layoutX="357.0" layoutY="530.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #00FFFF;" text="SignUp">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
